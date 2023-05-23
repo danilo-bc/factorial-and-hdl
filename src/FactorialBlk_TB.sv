@@ -36,13 +36,13 @@ initial begin
     in_valid = 1;
 
     @(posedge out_valid);
-    $display("Factorial of 3: %0d", out_data);
+    $display("Factorial of 3: %0d, out_valid: %0d, out_busy: %0d", out_data, out_valid, out_busy);
     // Calculate factorial for input 5
     in_data = 5;
     #5
 
     @(posedge out_valid);    
-    $display("Factorial of 5: %0d", out_data);
+    $display("Factorial of 5: %0d, out_valid: %0d, out_busy: %0d", out_data, out_valid, out_busy);
 
     #5 $finish;
 end
