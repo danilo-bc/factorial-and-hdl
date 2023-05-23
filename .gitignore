@@ -1,3 +1,6 @@
+# Personal SystemC output type
+*.syscexe
+
 # (Icarus) Verilog things
 *.iverout
 

@@ -21,5 +21,7 @@ make
 # Requirements
 - Python 3
 - Icarus Verilog (tested with v12-branch, built from [source](https://github.com/steveicarus/iverilog))
-- SystemC 2.x (tested with v.2.3.4 built from [source](https://www.accellera.org/downloads/standards/systemc))
+- SystemC 2.x (tested with v.2.3.4 built from [source](https://www.accellera.org/downloads/standards/systemc) using C++14 flag)
+    - Should be compatible with previous versions and the default C++ 98 flag
+    - Configured using cmake-gui, following the instructions
 
