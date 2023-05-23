@@ -15,7 +15,6 @@ module FactorialBlk(
     logic [1:0] curr_state;
     logic [1:0] next_state;
 
-    logic input_valid;
     logic [45:0] calc_buffer;
     logic [3:0] counter;
 
