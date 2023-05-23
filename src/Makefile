@@ -12,7 +12,7 @@ CPPFLAGS = g++ ${SYSTEMC_CFLAGS}
 LIBS = -L. -lm ${SYSTEMC_LIBS}
 INCLUDES = -I. ${SYSTEMC_INCLUDES}
 
-SOURCES = ${SYSTEMCTOPFILE}.cpp  main.cpp
+SOURCES = ${SYSTEMCTOPFILE}.cpp  sourcesink.cpp main.cpp
 OUTPUT_FILE = ${SYSTEMCTOPFILE}.syscexe
 
 all: systemverilog
@@ -23,7 +23,7 @@ systemverilog: FactorialBlk_TB.sv FactorialBlk.sv
 
 sc: sc_compile sc_run
 
-sc_compile: 
+sc_compile: ${SOURCES}
 	${CPPFLAGS} ${INCLUDES} ${LIBS} ${SOURCES} -o ${OUTPUT_FILE}
 
 sc_run:

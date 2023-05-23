@@ -53,9 +53,9 @@ module FactorialBlk(
         else begin
             case (curr_state)
                 INIT: begin
+                    out_valid <= 1'b0;
                     if (in_valid) begin
                         counter <= in_data;
-                        out_valid <= 1'b0;
                         out_busy <= 1'b1;
                     end
                 end
